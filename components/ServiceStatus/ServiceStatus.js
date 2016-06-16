@@ -14,6 +14,7 @@ const isOpen = (schedules) => {
     isBetween(currentTime, schedule.opensAt, schedule.closesAt)
   )
 
+  if (!schedules) return false
   return schedules.filter(isSomethingSchedule).length > 0
 }
 
